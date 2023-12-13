@@ -39,6 +39,7 @@ function askUpperCaseLetter() {
 
 function askLowerCaseLetter() {
   PasswordCriteria.lowercaseLetters = confirm("Please press OK to include lowercase letters in your password, or press Cancel to exclude them.");
+  console.log(PasswordCriteria.lowercaseLetters);
   // var lowerCaseCheck = prompt("Would you like to include lowercase letters in your password? Type Y for YES, any other key will be a NO.");
   // if (lowerCaseCheck === "Y" || lowerCaseCheck === "y") {
   //   PasswordCriteria.lowercaseLetters = true;
@@ -72,8 +73,57 @@ function askRandomNumber() {
 
     var specCharacters = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '=', '[', ']', '{', '}', '|', ';', ':', ',', '.', '<', '>', '/', '?'];
 
-    var randomIntInRange = Math.floor(Math.random() * 10);
-    console.log(randomIntInRange)
+    var randomIntInRange = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+    var possibleCharacters = [];
+    console.log("possibleCharacters = ", possibleCharacters)
+
+    if(PasswordCriteria.lowercaseLetters) {
+      possibleCharacters = possibleCharacters.concat(lettersLowercase);
+    }
+    console.log("possibleCharacters = ", possibleCharacters)
+
+    if(PasswordCriteria.uppercaseLetters) {
+      possibleCharacters = possibleCharacters.concat(lettersUppercase);
+    }
+    console.log("possibleCharacters = ", possibleCharacters)
+
+    if(PasswordCriteria.specialCharacters) {
+      possibleCharacters = possibleCharacters.concat(specCharacters);
+    }
+    console.log("possibleCharacters = ", possibleCharacters)
+
+    if(PasswordCriteria.numericCharacters) {
+      possibleCharacters = possibleCharacters.concat(randomIntInRange);
+    }
+    console.log("possibleCharacters = ", possibleCharacters)
+
+    if(PasswordCriteria.lowercaseLetters === false &&
+      PasswordCriteria.uppercaseLetters === false &&
+      PasswordCriteria.specialCharacters === false &&
+      PasswordCriteria.numericCharacters === false) {
+        alert("You need to choose at least one character type to generate a password");
+        generatePassword();
+      }
+
+      var newPassword = "";
+
+      var randomIndex = 0;
+
+      var randomCharacter = "";
+
+      console.log("possibleCharacters.length = ", possibleCharacters.length)
+
+      for(var i=0; i < PasswordCriteria.charactersLength; i++) {
+        randomIndex = Math.floor(Math.random() * possibleCharacters.length);
+        console.log("randomIndex = ", randomIndex)
+        randomCharacter = possibleCharacters[randomIndex];
+        console.log("randomCharacter = ", randomCharacter)
+        newPassword = newPassword + randomCharacter;
+        console.log("newPassword = ", newPassword)
+      }
+
+      return newPassword;
   }
 
   // Write password to the #password input
