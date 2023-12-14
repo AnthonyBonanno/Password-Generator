@@ -24,42 +24,23 @@ function askPasswordLength() {
 
 function askUpperCaseLetter() {
   PasswordCriteria.uppercaseLetters = confirm("Please press OK to include uppercase letters in your password, or press Cancel to exclude them.");
-  // var response = confirm("Press OK if you'd like to include Uppercase letters, Cancel otherwise.");
-  // if (response) {
-  //   PasswordCriteria.uppercaseLetters = true;
-  // } else {
-  //   PasswordCriteria.uppercaseLetters = false;
-  // }
-  // var upperCaseCheck = prompt("Would you like to include uppercase letters in your password? Type Y for YES, any other key will be a NO.");
-  // if (upperCaseCheck === "Y" ||  upperCaseCheck === "y") {
-  //   PasswordCriteria.uppercaseLetters = true; 
-  // }
   askLowerCaseLetter();
 }
 
 function askLowerCaseLetter() {
   PasswordCriteria.lowercaseLetters = confirm("Please press OK to include lowercase letters in your password, or press Cancel to exclude them.");
   console.log(PasswordCriteria.lowercaseLetters);
-  // var lowerCaseCheck = prompt("Would you like to include lowercase letters in your password? Type Y for YES, any other key will be a NO.");
-  // if (lowerCaseCheck === "Y" || lowerCaseCheck === "y") {
-  //   PasswordCriteria.lowercaseLetters = true;
-  // }
   askSpecialCharacters();
 } 
 
 function askSpecialCharacters() {
   PasswordCriteria.specialCharacters = confirm("Please press OK to include special characters in your password, or press Cancel to exclude them.");
-  // var specCharCheck = prompt("Would you like to include special characters in your password? Type Y for YES, any other key will be a NO.");
-  // if (specCharCheck === "Y" || specCharCheck === "y") {
-  //   PasswordCriteria.specialCharacters = true;
-  // }
   askRandomNumber();
 }
 
 
 function askRandomNumber() {
   PasswordCriteria.numericCharacters = confirm("Please press OK to include numbers in your password, or press Cancel to exclude them.");
-  // var numCharCheck = prompt("Would you like to include special characters in your password? Type Y for YES, any other key will be a NO.");
 }
   
 
