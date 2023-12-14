@@ -11,7 +11,7 @@ if statements, and for loops.
 Passwords can be a tricky thing to think up of on the spot, or even if given a lot of thought. And even if someone has thought up of a password, it may be
 easy for someone to guess, or to figure it out through the process of elimination. Password generators solve both these issues, since they can instantly
 create a secure password that is impossible to guess. This generator I've created will even let the user create their password with certain criteria in
-mind, like if they'd like to include numbers or uppercase letters, or exlude them.
+mind, like if they'd like to include numbers or uppercase letters, or exlude to them.
 
 ## What did you learn?
 
@@ -27,6 +27,6 @@ Here is a list of what I've learnt from making this random password generator:
 
 ## Example Screenshots of Changes Made
 
-![alt text]()
+![alt text](https://github.com/AnthonyBonanno/Password-Generator/blob/main/assets/images/Capture.PNG)
 
-![alt text]()
+![alt text](https://github.com/AnthonyBonanno/Password-Generator/blob/main/assets/images/Capture1.PNG)
