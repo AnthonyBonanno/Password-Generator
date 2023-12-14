@@ -30,3 +30,7 @@ Here is a list of what I've learnt from making this random password generator:
 ![alt text](https://github.com/AnthonyBonanno/Password-Generator/blob/main/assets/images/Capture.PNG)
 
 ![alt text](https://github.com/AnthonyBonanno/Password-Generator/blob/main/assets/images/Capture1.PNG)
+
+## Link to Deployed Application
+
+https://anthonybonanno.github.io/Password-Generator/
